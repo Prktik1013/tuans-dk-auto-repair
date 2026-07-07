@@ -1,0 +1,8 @@
+ClientPackage/
+BRIEF.md
+DESIGN-DIRECTION.md
+SELF-CERT.md
+*.log
+build-output.log
+handoffs.md
+decisions.md

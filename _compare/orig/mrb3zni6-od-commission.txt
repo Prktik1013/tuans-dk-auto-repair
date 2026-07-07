@@ -1,0 +1,4 @@
+Premium one-page site: Tuan's DK Auto Repair in Westminster, CA Commissioned local brand - distinctive typography and color, not a swapped template.
+Local customers; primary CTA tap-to-call (714) 705-5957. Phone (714) 705-5957 - tap-to-call CTA.
+Self-contained index.html with embedded CSS. $1k agency polish  -  hierarchy, contrast, anti-slop.
+IMPORTANT: Do NOT emit a discovery question-form. Write index.html now. No clarifying questions.
