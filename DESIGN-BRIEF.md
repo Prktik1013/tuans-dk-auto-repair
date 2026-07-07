@@ -2,7 +2,7 @@
 
 **generated_at**: 2026-07-07 15:07:43
 **niche**: auto repair
-**maps_url**: https://maps.app.goo.gl/nSb29kLJeSqYNDX18
+**maps_url**: https://www.google.com/maps/place/Tuan's+DK+Auto+Repair,+15113+Weststate+St+ste+b,+Westminster,+CA+92683
 
 ## Peer research (>=3 required before codegen)
 
@@ -15,7 +15,7 @@
 
 ## Preserved operator peers
 
-- https://maps.app.goo.gl/nSb29kLJeSqYNDX18
+- https://www.google.com/maps/place/Tuan's+DK+Auto+Repair,+15113+Weststate+St+ste+b,+Westminster,+CA+92683
 - https://www.carrier.com/residential/en/us/
 - https://www.lennox.com/residential/
 - https://www.trane.com/residential/

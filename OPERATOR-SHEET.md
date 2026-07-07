@@ -7,7 +7,7 @@
 ## Evidence (use in OD - do not invent)
 
 ### Google Maps (this business)
-- [Open Maps listing](https://maps.app.goo.gl/nSb29kLJeSqYNDX18)
+- [Open Maps listing](https://www.google.com/maps/place/Tuan's+DK+Auto+Repair,+15113+Weststate+St+ste+b,+Westminster,+CA+92683)
 - Scrape notes: intake-from-link
 
 ### Review language (harvested - copy tone only)
@@ -20,7 +20,7 @@
 - [https://www.lennox.com/residential/](https://www.lennox.com/residential/) - Service-area clarity, licensed contractor tone
 - [https://www.trane.com/residential/](https://www.trane.com/residential/) - Seasonal offer blocks without slop gradients
 - [https://styles.refero.design/category/home-services](https://styles.refero.design/category/home-services) - Refero trades pattern lock
-- [https://maps.app.goo.gl/nSb29kLJeSqYNDX18](https://maps.app.goo.gl/nSb29kLJeSqYNDX18) - peer reference
+- [https://www.google.com/maps/place/Tuan's+DK+Auto+Repair,+15113+Weststate+St+ste+b,+Westminster,+CA+92683](https://www.google.com/maps/place/Tuan's+DK+Auto+Repair,+15113+Weststate+St+ste+b,+Westminster,+CA+92683) - peer reference
 - [https://www.carrier.com/residential/en/us/](https://www.carrier.com/residential/en/us/) - peer reference
 
 ## Creative angle
