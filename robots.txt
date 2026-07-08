@@ -1,0 +1,5 @@
+# Demo preview also uses meta robots noindex on pages.
+# After sale: strip noindex from HTML so Pages can rank; keep Allow + Sitemap.
+User-agent: *
+Allow: /
+Sitemap: https://Prktik1013.github.io/tuans-dk-auto-repair/sitemap.xml
