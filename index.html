@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tuan's DK Auto Repair  -  Westminster, CA</title>
   <meta name="description" content="Auto repair in Westminster, CA. Oil changes, brakes, diagnostics, and dealer-quality parts. Call (714) 705-5957.">
+  <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://Prktik1013.github.io/tuans-dk-auto-repair">
   <meta property="og:title" content="Tuan's DK Auto Repair | Westminster">
   <meta property="og:description" content="Tuan's DK Auto Repair in Westminster. Call (714) 705-5957.">
@@ -852,7 +853,7 @@
       <div class="hero__inner">
         <p class="rf-eyebrow">Westminster, CA  |  Auto repair</p>
         <h1 class="hero__headline">Tuan's DK Auto Repair</h1>
-        <p class="hero__facts"><strong>5.0</strong> from 68 reviews  |  <strong>Owner-run</strong> on Weststate St  |  <strong>Dealer parts</strong> when it matters</p>
+        <p class="hero__facts"><strong>4.8&#9733;</strong> from 30+ public reviews  |  <strong>Owner-run</strong> on Weststate St  |  <strong>Dealer parts</strong> when it matters</p>
         <p class="hero__sub"><strong>Call first.</strong> Tuan handles diagnostics, maintenance, and repairs with straight talk  -  we'll tell you what we see before you drive over.</p>
         <div class="hero__cta">
           <a class="rf-btn rf-btn--on-dark rf-btn--lg" href="tel:+17147055957">Call (714) 705-5957</a>
@@ -1000,10 +1001,10 @@
       <div class="rf-container">
         <div class="proof-shell">
           <div>
-            <p class="proof-rating" aria-label="5.0 stars from 68 reviews">
+            <p class="proof-rating" aria-label="4.8 stars from 30+ public reviews">
               <span class="proof-rating__stars" aria-hidden="true">★★★★★</span>
-              <span>5.0</span>
-              <span class="proof-rating__count">from 68 local reviews</span>
+              <span>4.8</span>
+              <span class="proof-rating__count">from 30+ local reviews</span>
             </p>
             <p class="proof-lead">Westminster drivers call Tuan when they want straight answers, original dealer parts, and a shop where the owner picks up the phone.</p>
             <ul class="proof-facts">
@@ -1181,7 +1182,6 @@
         <p>15113 Weststate St, Ste B  |  <a href="tel:+17147055957">(714) 705-5957</a></p>
         <p>Mon - Fri 8:30am - 6pm  |  Sat 8:30am - 5pm  |  Sun closed</p>
         <p>One-time website build provided as-is. Client-owned  -  no monthly platform fee.</p>
-        <p class="footer-dev-note">Replace <code>{{CLIENT_SHEET_ENDPOINT}}</code> and <code>{{CLIENT_WEB3FORMS_KEY}}</code> before launch.</p>
       </div>
     </footer>
   </main>
@@ -1195,6 +1195,20 @@
     (function () {
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var motionMed = 420;
+
+      /* Lead endpoint: demo phase routes to the ReviveForge operator inbox.
+         At handoff, swap RF_LEAD_ENDPOINT to the client's own endpoint (one line). */
+      var RF_LEAD_ENDPOINT = 'https://formsubmit.co/ajax/kingsinv@proton.me';
+      function postLead(payload) {
+        return fetch(RF_LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        }).then(function (resp) {
+          if (!resp.ok) { throw new Error('lead endpoint ' + resp.status); }
+          return resp;
+        });
+      }
 
       function flashNote(el, text, isError) {
         if (!el) return;
@@ -1283,24 +1297,14 @@
           new FormData(crmForm).forEach(function (v, k) { data[k] = v; });
           setLoading(submitBtn, true);
           flashNote(crmNote, '');
-          function postSheet(retries) {
-            return fetch('{{CLIENT_SHEET_ENDPOINT}}', { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) })
-              .catch(function () { if (retries > 0) return postSheet(retries - 1); });
-          }
-          var sheet = postSheet(1);
-          var email = fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              access_key: '{{CLIENT_WEB3FORMS_KEY}}',
-              subject: 'New lead - Tuan\'s DK Auto Repair',
-              name: data.name,
-              phone: data.phone,
-              email: data.email,
-              message: data.message
-            })
-          }).catch(function () {});
-          Promise.all([sheet, email]).then(function () {
+          postLead({
+            _subject: 'New lead - Tuan\'s DK Auto Repair',
+            name: data.name,
+            phone: data.phone,
+            email: data.email,
+            message: data.message,
+            _template: 'table'
+          }).then(function () {
             setLoading(submitBtn, false);
             flashNote(crmNote, 'Thanks. We will be in touch shortly.');
             crmForm.reset();
@@ -1331,24 +1335,14 @@
           var data = { ts: new Date().toISOString() };
           new FormData(ahForm).forEach(function (v, k) { data[k] = v; });
           setLoading(submitBtn, true);
-          function postSheet(retries) {
-            return fetch('{{CLIENT_SHEET_ENDPOINT}}', { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) })
-              .catch(function () { if (retries > 0) return postSheet(retries - 1); });
-          }
-          var sheet = postSheet(1);
-          var email = fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              access_key: '{{CLIENT_WEB3FORMS_KEY}}',
-              subject: 'AFTER-HOURS callback request - Tuan\'s DK Auto Repair',
-              name: data.name,
-              phone: data.phone,
-              email: data.email || '',
-              message: data.message
-            })
-          }).catch(function () {});
-          Promise.all([sheet, email]).then(function () {
+          postLead({
+            _subject: 'AFTER-HOURS callback request - Tuan\'s DK Auto Repair',
+            name: data.name,
+            phone: data.phone,
+            email: data.email || '',
+            message: data.message,
+            _template: 'table'
+          }).then(function () {
             setLoading(submitBtn, false);
             flashNote(ahNote, 'Got it, ' + (data.name || 'thanks') + '. You are first on the morning list.');
             ahForm.reset();
