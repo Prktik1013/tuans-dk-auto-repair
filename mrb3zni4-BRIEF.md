@@ -11,7 +11,7 @@ slug: tuans-dk-auto-repair
 **Phone**: (714) 705-5957
 **City**: Westminster CA
 **Niche**: auto repair
-**Maps**: https://www.google.com/maps/place/Tuan's+DK+Auto+Repair,+15113+Weststate+St+ste+b,+Westminster,+CA+92683
+**Maps**: https://www.google.com/maps/place/Tuan's+Dk+Auto+Repair/@33.7431719,-117.9722528,17z/data=!3m1!4b1!4m6!3m5!1s0x80dd27b51d9c2b39:0x3db482d2920f47ce!8m2!3d33.7431675!4d-117.9696779!16s%2Fg%2F1vxcwqnt?entry=ttu
 **ProjectSlug**: tuans-dk-auto-repair
 
 ## Scrape notes
