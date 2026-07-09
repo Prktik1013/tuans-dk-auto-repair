@@ -1132,9 +1132,9 @@
         <h2>Request a callback</h2>
         <p>Tell us what's going on with your car. Tuan personally reviews every message and will call you back with honest guidance: what might be wrong, what to bring in, and how soon we can help.</p>
 
-        <aside class="rf-ghost" role="note" data-rf-module="ghost-lead-catcher">
+        <aside class="rf-ghost" role="note">
           <p class="rf-ghost__mark" aria-hidden="true">&#10003;</p>
-          <p class="rf-ghost__line"><strong>We reply within one business day.</strong> If we're ever slower, Tuan follows up personally — your message won't sit in a queue.</p>
+          <p class="rf-ghost__line"><strong>Call or leave a message.</strong> Closed? Use the form - we call first thing next open day. Prefer to talk now? <a href="tel:+17147055957">(714) 705-5957</a>.</p>
         </aside>
 
         <section id="contact-day" class="rf-crm form-swap" data-rf-module="crm-sheet-connector">
@@ -1331,7 +1331,7 @@
             source: data.source || 'website', _template: 'table'
           }).then(function () {
             setLoading(submitBtn, false);
-            flashNote(crmNote, 'Thanks. We will be in touch shortly.');
+            flashNote(crmNote, 'Thanks - we got it. Prefer to talk? Call (714) 705-5957.');
             crmForm.reset();
           }).catch(function () {
             setLoading(submitBtn, false);
@@ -1366,7 +1366,7 @@
             source: 'after-hours', _template: 'table'
           }).then(function () {
             setLoading(submitBtn, false);
-            flashNote(ahNote, 'Got it, ' + (data.name || 'thanks') + '. You are first on the morning list.');
+            flashNote(ahNote, 'Got it. We call first thing - or call (714) 705-5957 if urgent.');
             ahForm.reset();
           }).catch(function () {
             setLoading(submitBtn, false);

@@ -21,3 +21,6 @@
 !assets/**
 build-output.log
 *.log
+*backup*
+*-backup*
+index.redesign-backup.html
